@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resaltador de palabras</title>
+
+  <!-- Fuente Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      font-size: 10px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.6rem;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fff;
+      color: #333;
+    }
+
+    input, textarea, button, select {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .layout {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .layout__main {
+      width: 50rem;
+      max-width: 90%;
+    }
+
+    .main__input {
+      display: block;
+      width: 100%;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border: 2px solid #ccc;
+      outline: none;
+      margin-bottom: 3rem;
+      font-size: 1.6rem;
+    }
+
+    .main__text {
+      text-align: justify;
+      line-height: 1.8;
+    }
+
+    .text__search {
+      background-color: #CDBAF5;
+      color: #5B429D;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      padding: 0.3rem 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <main class="layout__main">
+      <input type="text" class="main__input" placeholder="Escribe una palabra y presiona Enter" />
+
+      <p class="main__text">
+        Javascript es un lenguaje de programación que permite crear páginas web dinámicas y con interactividad. Es uno de los pilares fundamentales del desarrollo web, junto con HTML y CSS. Con JavaScript, puedes manipular el contenido de una página, responder a eventos del usuario, realizar peticiones a servidores y mucho más. Es un lenguaje versátil que se utiliza tanto en el lado del cliente (navegador) como en el lado del servidor (Node.js).
+      </p>
+    </main>
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const input = document.querySelector(".main__input");
+      const textElement = document.querySelector(".main__text");
+      const originalText = textElement.textContent;
+
+      input.addEventListener("keydown", (e) => {
+        const search = input.value.trim();
+
+        if (search !== "" && e.key === "Enter") {
+          const regExp = new RegExp(`(${search})`, "gi");
+          const highlighted = originalText.replace(regExp, "<span class='text__search'>$1</span>");
+          textElement.innerHTML = highlighted;
+          input.value = "";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
