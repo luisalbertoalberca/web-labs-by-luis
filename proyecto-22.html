@@ -1,0 +1,93 @@
+<!--
+Crea un formulario con un campo de tipo textarea, email, contraseña, radio, select, checkbox, fichero, fecha, numero, color y submit
+
+Todos los campos deberan estar dentro de un fieldset y usar el campo legend.
+
+todos los campos deberan tener un label.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 22 HTML</title>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+
+    <form>
+        <fieldset>
+            <legend>Descripcion</legend>
+            <label for="descripcion">Introduce una descripcion:</label>
+            <br/>
+            <textarea id="descripcion" name="descripcion"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Email</legend>
+            <label for="email">Introduce una email:</label>
+            <br/>
+            <input type="email" id="email" name="email">
+        </fieldset>
+
+        <fieldset>
+            <legend>Radio</legend>
+            <label for="edad">Edad:</label>
+
+            <input id="radio" name="edad" id="mayor"></input>
+            <label for="mayor">Mayor de edad</label>
+            
+            <input id="radio" name="edad" id="menor"></input>
+            <label for="menor">Menor de edad</label>
+
+            <input id="radio" name="edad" id="anciano"></input>
+            <label for="anciano">Mayor de 65 años</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select</legend>
+            <label for="comidas">Comidas</label>
+            <select id="comidas" name="comidas">
+                <option value="pasta">Pasta</option>
+                <option value="pizza">Pizza</option>
+                <option value="hamburguesa">Hamburguesa</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Checkbox</legend>
+            <input id="checkbox" name="terminos" type="checkbox"/>
+            <label for="terminos">Acepto los terminos y condiciones</label>
+            </fieldset>
+
+        <fieldset>
+            <legend>Fichero</legend>
+            <label for="fichero">Sube un fichero:</label>
+            <input type="file" id="fichero" name="fichero"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fecha</legend>
+            <label for="fecha">Selecciona una fecha:</label>
+            <input type="date" id="fecha" name="fecha"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Numero</legend>
+            <label for="numero">Selecciona un numero:</label>
+            <input type="number" id="numero" name="numero"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Color</legend>
+            <label for="color">Selecciona un color:</label>
+            <input type="color" id="color" name="color"/>
+        </fieldset>
+
+        <br/>
+
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+</html>
