@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.mind"/>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
@@ -14,9 +14,8 @@
 
     <div class="layout">
 
-        <main class="layout__main">
-
-            <header class="main__header">
+       
+        <header class="layout__header">
                 <div class="header__top">
                     <i class="fa-solid fa-language"></i>
 
@@ -32,14 +31,75 @@
                         </div>
 
                         <select name="languages" class="search__select">
-                            
+                            <option class="search__option" value="esp">Español</option>
+                            <option class="search__option" value="ing">Ingles</option>
+                            <option class="search__option" value="ger">Aleman</option>
+                            <option class="search__option" value="fr">Frances</option>
+                        
                         </select>
                     </form>
                 </div>
+        </header>
 
+        <main class="layout__word">
+            <h1 class="word__title">Ordenador</h1>
+            <a href="#" class="word__btn">
+                <i class="fa-solid fa-play"></i>
+            </a>
 
-            </header>
         </main>
+
+        <section class="layout__definitions">
+            <h3 class="definitions__title">
+                <span>Definiciones</span>
+            </h3>
+
+            <ul class="definitions__list">
+                <li class="list__item">
+                    <p class="list__definition">
+                        <b>Ordenador</b>:Maquina electronica capaz de almacenar informacion y tratarla automaticamente mediante
+                        operaciones matematicas y logicas controladas por programas informaticos.
+                    </p>
+                </li>
+
+                <li class="list__item">
+                    <p class="list__definition">
+                        <b>Ordenador compatible</b>
+                        Ordenador capaz de ejecutar los mismos programas que otros ordenadores del mismo tipo.
+                    </p>
+                </li>
+
+                <li class="list__item">
+                    <p class="list__definition">
+                        <b>Ordenador personal</b>
+                        Ordenador de sobremesa que incluye unidad central, teclado, pantalla y una o mas unidades de disco y que 
+                        puede funcionar sin estar conectado a una red informatica.
+                    </p>
+                </li>
+
+                <li class="list__item">
+                    <p class="list__definition">
+                        <b>Ordenador portatil</b>
+                        Ordenador personal de peso y tamaño tan reducidos que se pouede llevar comodamente de un lado a otro, como 
+                        si fuera un maletin; una bateria invcorporada le permite cierta autonomia de funcionamiento.
+                    </p>
+                </li>
+            </ul>
+
+            <article class="definitions__syn">
+                <h4 class="syn__title">Sinónimos:</h4>
+                <span class="syn__item">Computador</span>
+                <span class="syn__item">Proceadora</span>
+                <span class="syn__item">Computadora</span>
+                </article>
+        </section>
+
+        <footer class="layout__footer">
+            <p class="footer__text">
+                &copy; 2026 - Todos los derechos reservados
+            </p>
+        </footer>
+       
     </div>
     
 </body>
