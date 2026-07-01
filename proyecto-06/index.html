@@ -6,7 +6,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -22,7 +22,6 @@
             <div class="main__generate">
                 <p class="generate__mail">alberto@temp.com</p>
                 <i class="fa-solid fa-copy generate__icon"></i>
-
             </div>
 
             <form class="main__form">
@@ -36,25 +35,31 @@
                     <input class="control__range" type="range" value="4" min="1" max="10" />
                 </div>
 
-                <div class="form__control">
+                <div class="form__control">               
                     <input type="checkbox" class="control__checkbox" id="letters" name="letters"/>
                     <label for="letters" class="control__label">Con letras</label>
-
+                </div> 
+                
+                <div class="form__control">
                     <input type="checkbox" class="control__checkbox" id="numbers" name="numbers"/>
                     <label for="numbers" class="control__label">Con números</label>
+                </div>
 
-                    <input type="checkbox" class="control__checkbox" id="syn" name="syn"/>
-                    <label for="syn" class="control__label">Con símbolos</label>
+                <div class="form__control">
+                    <input type="checkbox" class="control__checkbox" id="sym" name="sym"/>
+                    <label for="sym" class="control__label">Con símbolos</label>
+                </div>
 
+                <div class="form__control">
                     <input type="checkbox" class="control__checkbox" id="mayus" name="mayus" checked />
                     <label for="mayus" class="control__label">Con mayusculas</label>
-
-                    <div class="for__control">
-                        <input type="text" class="control__input" placeholder="Dominio personalizado"/>
-                    </div>
-
-                    <input type="submit" value="Crear" class="for__submit"/>
                 </div>
+
+                <div class="form__control">
+                    <input type="text" class="control__input" placeholder="personalizado"/>
+                </div>
+                    
+                <input type="submit" value="Crear" class="form__submit"/>
             </form>
 
         </main>
