@@ -1,34 +1,23 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+#caja,
+#pandora{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 380px;
 }
 
-.layout {
-    position: absolute;
-    top: 0;
-    left: 0;
+h1,h3{
+    font-size: 20px;
 }
 
-.main__input:hover,
-.main__input:focus {
-    border-color: #A88FFA;
-    box-shadow: 0 0 0.3rem #CDBAF5;
+#caja{
+    background-color: rgb(0, 132, 255);
 }
 
-.main__input {
-    transition: all 0.3s ease-in-out;
-}
-
-.text__search {
-    transition: background-color 0.3s;
-}
-
-.text__search:hover {
-    background-color: #b6a1f0;
-}
-
-@media (max-width: 600px) {
-    .layout__main {
-        width: 90%;
-    }
+#pandora{
+    background-color: bisque;
 }
